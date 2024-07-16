@@ -4,6 +4,7 @@ import { Signup } from './pages/signup';
 import { Blog } from './pages/blog';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Blogs } from './pages/blogs';
+import { Publish } from './pages/publish';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/signin" element={<Signin />} />
         <Route path="/blog/:id" element={<Blog />} />
         <Route path='/blogs' element={<Blogs />} />
+        <Route path='/publish' element={<Publish />} />
       </Routes>
     </BrowserRouter>
   );
