@@ -9,6 +9,7 @@ export const useBlogs = () => {
 
     useEffect(() => {
         axios.get(`${BACKEND_URL}/api/v1/blog/bulk`,{
+            method: "GET",
             headers: {
                 "Authorization": localStorage.getItem("token")
             }
@@ -17,7 +18,7 @@ export const useBlogs = () => {
                 setblogs(response.data.allblogs);
                 setloading(false);
             })
-    })
+    },[])
 
     return {
         loading,
